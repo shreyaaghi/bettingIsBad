@@ -1,0 +1,69 @@
+Get 
+-Get data from this parameter 
+GET /user/<id>
+
+POST
+-send data to server and processers
+POST /user/
+
+<form method="POST" action-"/form">
+
+body
+{
+"id":123,
+"username":"edwardr24"
+}
+
+
+[feat] - new feature for user 
+[fix] - bug fix
+[docs] - changes to documentation
+[style] - formatting (no direct code changes)
+[chore] - updating grunt tasks
+
+REST Requests: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/TRACE
+
+put - updates the whole record of data
+patch - updates one portion of the record of data
+delete - deletes data
+head - gives the headers (authentication stuff), like get but without body
+options - options that the url has 
+connect
+trace - logs what's there
+prop find?
+
+
+IDEA
+
+User Registration/Login:
+-secure system 
+-allowing users to create accounts
+-log in using credentials
+
+Personal Limits Setting:
+-Users can set personal limits on the amount of money, time, or frequency they want to spend on betting
+-Ex. 1000 dollars, 1 week, every 2 days
+-mobile: requires access to screen time
+-computer: various strategies such as browser extensions that restrict access to gambling websites or software that limits time spent on specific sites
+
+Activity Tracking: 
+-The app can track user activity within the platform
+-keeps a record of bets placed or gambling sessions
+
+(MAYBE) Notifications and Alerts: 
+-Provides timely reminders when users approach or exceed their set limits
+-reminders help them stay in control
+
+Resources and Support: 
+-similar to the tobacco app
+-offers access to resources, helplines, or support networks for individuals dealing with gambling addiction
+-talks ab gambling safely
+
+Data Analysis and Reporting: 
+-gives users insights into their betting patterns and habits 
+-helps them make informed decisions about their gambling behavior
+
+what information do we want to store from the user?
+user profile consists of many things (ex. social media has username, name itself, description, caption, etc.)
+what do we want to keep track of?
+

@@ -1,0 +1,8 @@
+.local/*
+.replit/*
+replit*
+.cache/
+.breakpoints/
+.upm/
+.pythonlibs/
+*.pyc
