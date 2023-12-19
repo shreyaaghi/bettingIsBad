@@ -40,4 +40,4 @@ from flask import Flask, request, Response
 
 from util import createContents
 
-print(createContents([{'username':'edward', 'password':'edward'}, {'username': 'shreya', 'password': 'shreya'}]))
+createContents([{'username':'edward', 'password':'edward'}, {'username': 'shreya', 'password': 'shreya'}, {'username': 'allen', 'password': 'allen'}, {'username': 'tyler', 'password': 'tyler'}, {'username': 'aldo', 'password': 'aldo'}, {'username': 'arjun', 'password': 'arjun'}])

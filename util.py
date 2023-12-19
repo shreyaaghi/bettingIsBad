@@ -9,4 +9,15 @@ def writeToFile(filename, contents):
     f.write(']')
 
 def createContents(contents):
-  print(contents)
+  c = ""
+  c += "[\n"
+  for i, content in enumerate(contents):
+    c += "\t"
+    c += str(content)
+
+    # print(i, content)
+  c += "]\n"
+  print("c:", c)
+  print("contents:", contents)
+  # Ideally, c should be the indented version of contents
+
