@@ -1,4 +1,4 @@
-from flask import Flask, request, Response
+# from flask import Flask, request, Response
 
 # app = Flask(__name__)
 
@@ -38,6 +38,12 @@ from flask import Flask, request, Response
 # from util import writeToFile
 # writeToFile('test.json', [{'username':'edward', 'password':'edward'}])
 
-from util import createContents
+# from util import createContents, writeToFile
 
-createContents([{'username':'edward', 'password':'edward'}, {'username': 'shreya', 'password': 'shreya'}, {'username': 'allen', 'password': 'allen'}, {'username': 'tyler', 'password': 'tyler'}, {'username': 'aldo', 'password': 'aldo'}, {'username': 'arjun', 'password': 'arjun'}])
+
+# writeToFile("users.json", [{'username':'edward', 'password':'edward'}, {'username': 'shreya', 'password': 'shreya'}, {'username': 'allen', 'password': 'allen'}, {'username': 'tyler', 'password': 'tyler'}, {'username': 'aldo', 'password': 'aldo'}, {'username': 'arjun', 'password': 'arjun'}])
+
+from app import run
+run()
+# from util import readFile
+# print(readFile('users.json'))

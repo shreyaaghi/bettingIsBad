@@ -1,23 +1,31 @@
+import json
 def writeToFile(filename, contents):
   with open(filename, 'w') as f:
-    f.write('[\n')
-    for item in contents:
-      f.write('\t{\n')
-      for key in item:
-        f.write(f'\t\t\'{key}\': \'{item[key]}\',\n')
-      f.write('\t},\n')
-    f.write(']')
+    f.write(createContents(contents))
 
 def createContents(contents):
   c = ""
   c += "[\n"
+  num_items = len(contents)
+
   for i, content in enumerate(contents):
-    c += "\t"
-    c += str(content)
+    c += "\t{\n"
+    num_keys = len(content)
 
-    # print(i, content)
+    for j, (key, value) in enumerate(content.items()):
+      c += f"\t\t\"{key}\": \"{value}\""
+      if j < num_keys - 1:
+        c += ","
+      c += "\n"
+    c += "\t}"
+
+    if i < num_items - 1:
+      c += ","
+    c += "\n"
   c += "]\n"
-  print("c:", c)
-  print("contents:", contents)
-  # Ideally, c should be the indented version of contents
 
+  return c
+
+def readFile(filename):
+  with open(filename, 'r') as f:
+    return json.load(f)
