@@ -16,6 +16,9 @@ def signup():
   users.append(newUser)
   writeToFile('users.json', users)
   return str(newUser)
+  if bcrypt.checkpw():
+    token = jwt.encode({'user_id': newUser.get('id')}, algorithm='HS256')
+  return Response(token, 200)
 # return jwt later (WHAT IS JWT)
 
 def login():
@@ -37,3 +40,6 @@ def login():
         return Response(token, 200)
       else:
         return Response('Incorrect password', 401)
+      
+
+# HOMEWORK: encode the signup with jwt, start looking at the other paths we want to write 
