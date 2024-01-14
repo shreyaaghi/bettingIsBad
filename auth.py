@@ -42,4 +42,4 @@ def login():
         return Response('Incorrect password', 401)
       
 
-# HOMEWORK: encode the signup with jwt, start looking at the other paths we want to write 
+# HOMEWORK: encode the signup with jwt
