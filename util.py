@@ -27,5 +27,9 @@ def createContents(contents):
   return c
 
 def readFile(filename):
-  with open(filename, 'r') as f:
-    return json.load(f)
+  try:
+    with open(filename, 'r') as f:
+      return json.load(f)
+  except FileNotFoundError:
+    with open(filename, 'w') as f:
+      return []

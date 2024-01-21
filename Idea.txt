@@ -40,6 +40,10 @@ User Registration/Login:
 -allowing users to create accounts
 -log in using credentials
 
+User Profile
+-what does it look like
+-what do we need to store
+
 Personal Limits Setting:
 -Users can set personal limits on the amount of money, time, or frequency they want to spend on betting
 -Ex. 1000 dollars, 1 week, every 2 days

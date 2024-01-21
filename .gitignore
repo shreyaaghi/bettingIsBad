@@ -6,3 +6,4 @@ replit*
 .upm/
 .pythonlibs/
 *.pyc
+.env
