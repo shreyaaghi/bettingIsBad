@@ -3,6 +3,10 @@ def writeToFile(filename, contents):
   with open(filename, 'w') as f:
     f.write(createContents(contents))
 
+def writeToJson(filename, contents):
+  with open(filename, 'w') as f:
+    f.write(json.dumps(contents))
+
 def createContents(contents):
   c = ""
   c += "[\n"
@@ -26,10 +30,10 @@ def createContents(contents):
 
   return c
 
-def readFile(filename):
+def readFile(filename, default=[]):
   try:
     with open(filename, 'r') as f:
       return json.load(f)
   except FileNotFoundError:
     with open(filename, 'w') as f:
-      return []
+      return default
