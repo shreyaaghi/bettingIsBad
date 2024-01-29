@@ -18,8 +18,24 @@ def createUser(id, username, userPhoto, userBio):
     return "New user created"
 
 def updateUser(id, data):
-    pass
-# HOMEWORK
+    user = getUser(id)
+    if user is None:
+        return Response("User not found", 404)
+    for key, value in data.items():
+        user[key] = value
+    profiles = readFile('profiles.json', {})
+    profiles.update({id:user})
+    writeToJson('profiles.json', profiles)
+    return "User updated"
 
 def deleteUser(id):
-    pass
+    user = getUser(id)
+    if user is None:
+        return Response("User not found", 404)
+    profiles = readFile('profiles.json', {})
+    del profiles[id]
+    writeToJson('profiles.json', profiles)
+    return 'User deleted'
+    
+  
+# implement delete
