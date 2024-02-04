@@ -71,3 +71,12 @@ what information do we want to store from the user?
 user profile consists of many things (ex. social media has username, name itself, description, caption, etc.)
 what do we want to keep track of?
 
+
+
+
+
+HOMEWORK: add more details, what do I want it to look like?
+write out the entire idea 
+what is it doing?
+syncing up with app or user manually putting info?
+create profile table + uniques
